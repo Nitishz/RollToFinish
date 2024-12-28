@@ -1,0 +1,169 @@
+### Game Design Document: Sidescrolling 2D Multiplayer Racing Game
+
+---
+
+#### **1. Game Overview**
+
+- **Title:** <To_be_decided>
+- **Genre:** Sidescrolling 2D Multiplayer Racing
+- **Platform:** Mobile (iOS, Android)
+- **Target Audience:** Casual and competitive gamers, ages 10+
+- **Game Summary:** 2-8 players control different colored balls and race to the finish line, avoiding obstacles in a variety of themed maps.
+
+---
+
+#### **2. Core Gameplay Features**
+
+- **Player Controls:**
+  - Left/Right movement.
+  - Jump button (single and double jump mechanics).
+
+- **Multiplayer:**
+  - Real-time matches for 2-8 players.
+  - Matchmaking and lobby creation.
+  - Leaderboards and rankings for each tournament played.
+
+- **Interactive Objects:**
+  - Static obstacles (e.g., walls, spikes).
+  - Dynamic obstacles (e.g., moving platforms, collapsing platforms).
+  - Special platforms (e.g., jumping trampolines, slides).
+
+- **Scoring System:**
+  - Each tournament consists of 4-6 rounds.
+  - Players will be ranked based on coins collected and finishing position in each round.
+  - Top 3 players from the previous rounds will compete to win in the final.
+
+---
+
+#### **3. Visual and Audio Design**
+
+- **Art Style:**
+  - Changes based on racetrack theme.
+  - Dynamic background elements (e.g., Taj Mahal during the India level).
+  - Customizable player ball appearances (colors, patterns, and skins).
+
+- **Audio:**
+  - Each racetrack has a different audio theme.
+  - Audio affects ball speed; the ball moves faster during fast audio sections.
+  - Visual effects sync with audio (e.g., screen flashes on bass drops, drummers appear during drum rolls).
+  - Sound effects for jumps, collisions, and power-ups.
+
+---
+
+#### **4. Maps**
+
+- **Level Design:**
+  - Multiple race tracks, each 3-6 minutes in length.
+  - Varied themes (e.g., India, 90s RPG, Rock ‘n’ Roll).
+  - Shortcuts and hidden paths for skilled players.
+
+---
+
+#### **5. Game Modes**
+
+- **King of the Balls:**
+  - Tournament with 5-6 rounds (normal + 1 bonus final).
+  - 4-8 players can play at a time.
+  - Leaderboard maintained, and the top 3 finalists play the final round.
+  - If final scores are tied, the winners can vote to play another round. 
+  - In case players decide not to play next round, all players tied at number position will be termed winners.
+
+- **Casual Multiplayer:**
+  - 2-8 players compete on any random track.
+
+- **Relay Race:**
+  - 2 teams of 2-4 members participate in 4-5 rounds.
+  - Goal is to reach the end of the last round before the other team. 
+  - Teammate from the previous round must reach the finish line of the previous round before teammate of current round can start the current round.
+  - A tag animation will play out when a teammates tag and the next round begins immediately. 
+
+- **Chill Mode:**
+  - A calmer, relaxed mode where the objective is to determine the color of your ball as quickly as possible.
+  - 4-8 players are assigned randomly colored balls. Each ball starts at the (0,0) position of a mesh grid. Players can move to adjacent positions.
+  - If two balls are at the same position, the grid point color turns black. When only one ball is present, its color is revealed.
+  - 5-10 games are played, with cumulative scores determining the final winner.
+
+---
+
+#### **6. Technical Specifications**
+
+- **Game Engine:** Unity (C#).
+
+- **Networking:**
+  - Photon Unity Networking (PUN) for multiplayer.
+  - Support for real-time matchmaking and peer-to-peer connections.
+
+- **Physics:**
+  - 2D physics engine for realistic ball movement.
+  - Custom gravity and collision handling.
+
+- **Performance:**
+  - Optimized for low-latency multiplayer.
+  - Scalable to various device specifications.
+
+---
+
+#### **7. Monetization**
+
+- **Free-to-Play Model:**
+  - In-app purchases (e.g., cosmetic skins, power-up packs). They are purely cosmetic.
+  - Half-screen ads during menus.
+
+---
+
+#### **8. Development Timeline**
+
+- **Phase 1: Pre-Production (1 Month)**
+  - Concept finalization.
+  - Design document creation.
+  - Prototyping basic mechanics.
+
+- **Phase 2: Core Development (3 Months)**
+  - Implement player controls and physics.
+  - Create multiplayer functionality.
+  - Design initial levels and obstacles.
+
+- **Phase 3: Testing and Refinement (2 Months)**
+  - Beta testing with focus groups.
+  - Performance optimization.
+  - Bug fixing.
+
+- **Phase 4: Launch and Post-Launch Support (Ongoing)**
+  - Release on app stores.
+  - Regular updates with new levels, features, and cosmetics.
+
+---
+
+#### **9. Team Roles**
+
+- **Game Designer(s):** Overall ideas and vision.
+- **Programmer(s):** Game logic, multiplayer implementation, physics.
+- **Artist(s):** Visual assets, animations, level design.
+- **Sound Designer:** Music and sound effects.
+- **QA Tester(s):** Bug testing and feedback.
+
+---
+
+#### **10. Risks and Challenges**
+
+- Maintaining low-latency multiplayer across regions.
+- Balancing obstacles and difficulty progression.
+- Ensuring smooth performance on low-end devices.
+- Standing out in a competitive mobile gaming market.
+
+---
+
+#### **11. Future Enhancements**
+
+- Cross-platform play (mobile and PC).
+- Community-created levels.
+
+---
+
+#### **12. References and Inspirations**
+
+- Games like *Fall Guys* for multiplayer aspects.
+- 2D runners for gameplay.
+- Popular multiplayer mobile games for pacing and monetization strategies.
+
+---
